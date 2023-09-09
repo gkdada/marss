@@ -8,7 +8,7 @@ Running marss without any arguments just displays the copyright and syntax infor
 Use the argument -d to download new episodes of the configured RSS feeds.
 
 
-## Configuration
+## configuration
 
 Create a file called marss.conf in your <HOME_FOLDER/.marss>. The format of this file is provided in marss.conf.sample.
 
