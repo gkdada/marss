@@ -1,0 +1,40 @@
+[global]
+prepend feed number=true
+#target dir=/mnt/drivex/Podcasts
+target dir=/home/user1/Podcasts
+create subdir with date=true
+reorder feed names=false
+
+[Feed002]
+Title=The Infinite Monkey Cage
+URL=https://www.bbc.co.uk/programmes/b00snr0w/episodes/downloads.rss
+Select=false
+LastEpisode=http://open.live.bbc.co.uk/mediaselector/6/redir/version/2.0/mediaset/audio-nondrm-download/proto/http/vpid/p0fwf3xq.mp3
+LastGUID=urn:bbc:podcast:p0fwwxq7
+LastPubDate=Sat, 05 Aug 2023 18:15:00 +0000
+
+[Feed004]
+Title=Linux Action News
+URL=https://feeds.fireside.fm/linuxactionnews/rss
+Select=false
+LastEpisode=https://aphid.fireside.fm/d/1437767933/dec90738-e640-45e5-b375-4573052f4bf4/270cad96-f51a-4143-9b0c-37083bd03e12.mp3
+LastGUID=270cad96-f51a-4143-9b0c-37083bd03e12
+LastPubDate=Thu, 06 Jul 2023 10:30:00 -0700
+
+[Feed007]
+Title=Security Now (Audio)
+URL=https://feeds.twit.tv/sn.xml
+Select=false
+LastEpisode=https://pdst.fm/e/pscrb.fm/rss/p/cdn.twit.tv/libsyn/sn_935/c18d5d13-9b48-44ea-9b24-b368f6c8d6c7/R1_sn0935.mp3
+LastGUID=https://pdst.fm/e/pscrb.fm/rss/p/cdn.twit.tv/audio/sn/sn0935/sn0935.mp3
+LastPubDate=Tue, 15 Aug 2023 17:53:17 PDT
+
+[Feed009]
+Title=MP3 – mintCast
+URL=https://mintcast.org/category/mp3/feed/
+Select=false
+LastEpisode=https://archive.org/download/mintCast418/ep418.mp3
+LastGUID=https://mintcast.org/?p=6304
+LastPubDate=Sat, 12 Aug 2023 11:53:40 +0000
+
+

@@ -1,0 +1,4 @@
+bin_PROGRAMS = marss
+AM_CPPFLAGS = ${LIBXML2_CFLAGS} ${GLIB_CFLAGS} ${LIBCURL_CFLAGS}
+marss_SOURCES = main.cpp FeedsFile.cpp HttpRequest.cpp XmlParser.cpp
+marss_LDADD = ${LIBXML2_LIBS} ${GLIB_LIBS} ${LIBCURL_LIBS}
