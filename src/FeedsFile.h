@@ -75,7 +75,7 @@ protected:
 class CRssFeed
 {
 public:
-    friend CConfigFile;
+    friend class CConfigFile;
     
     //declared as a static function here, so it can be used by unrelated classes.
     static uint32_t convertTimeString(const char* strTime);

@@ -193,7 +193,7 @@ int CConfigFile::createPodcastSaveDir(string& strSaveDir)
     time(&rawTime);
     ptm = localtime(&rawTime);
     
-    sprintf(strDate,"/%04u%02u%02u",ptm->tm_year+1900,ptm->tm_mon+1,ptm->tm_mday);
+    snprintf(strDate, 20, "/%04u%02u%02u",ptm->tm_year+1900,ptm->tm_mon+1,ptm->tm_mday);
     
     strSaveDir += strDate;
     
@@ -297,7 +297,7 @@ int CRssFeed::Load(unsigned int FeedNum, GKeyFile* pFile)
 {
     m_uiFeedNum = FeedNum;
     char Group[40];
-    sprintf(Group,"Feed%u",FeedNum);
+    snprintf(Group, sizeof(Group), "Feed%u", FeedNum);
     GError* pError = NULL;
     char* pTemp = g_key_file_get_string(pFile,Group,"Title",&pError);
     if(pError == NULL)
@@ -342,7 +342,7 @@ int CRssFeed::Load(unsigned int FeedNum, GKeyFile* pFile)
         VerbosePrintf("[%s]->LastPubDate in Hex = 0x%X\r\n\r\n",Group, uiLastEncTime);
     }
     
-    sprintf(Group,"Feed%u",FeedNum+1);
+    snprintf(Group, sizeof(Group), "Feed%u",FeedNum+1);
     bVal = g_key_file_has_group(pFile,Group);
     if(bVal)
     {
@@ -447,15 +447,15 @@ int CRssFeed::Save(GKeyFile* pFile, bool bRenameFeeds)
     char GroupName[20];
     if(!m_strGroupName.length())    //this is the case when we use the first or second form (deprecated) of Load
     {
-        sprintf(GroupName,"Feed%02u",m_uiFeedNum);
+        snprintf(GroupName, sizeof(GroupName), "Feed%02u",m_uiFeedNum);
         pGroupName = GroupName;
     }
     else if(bRenameFeeds)
     {
         if(m_strGroupName.length() < 7) //if existing names are like Feed1 or Feed01 etc, new names are Feed001 etc.
-            sprintf(GroupName,"Feed%03u", m_uiFeedNum);
+            snprintf(GroupName, sizeof(GroupName), "Feed%03u", m_uiFeedNum);
         else
-            sprintf(GroupName,"Feed%02u", m_uiFeedNum);
+            snprintf(GroupName, sizeof(GroupName), "Feed%02u", m_uiFeedNum);
         pGroupName = GroupName;
         
         g_key_file_remove_group(pFile, m_strGroupName.c_str(), &pError);

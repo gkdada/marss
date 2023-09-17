@@ -290,8 +290,8 @@ void GenerateName(string& strTarget, LPRSS_FEED pFeed, const char* szFilename, s
     
     if(bPrependFeedNum)
     {
-        char szPrepend[10];
-        sprintf(szPrepend,"%02u_",pFeed->getFeedNum());
+        char szPrepend[20];
+        snprintf(szPrepend, sizeof(szPrepend), "%02u_",pFeed->getFeedNum());
         strTarget += szPrepend;
     }
     

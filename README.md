@@ -20,4 +20,4 @@ The feeds will be numbered in the order that they appear in the configuration fi
 
 In the [Feed] section, "Select=false" will download ALL new episodes. "Select=true" will offer a list of new episodes and allow you to select which episodes you want to download.
 
-When adding a new feed, just add Title, URL and Select fields. Other fields will be added by the application as new episodes are downloaded. The first time a feed is processed, the application downloads any episodes that were released within the last one week from the time the application being run.
+When adding a new feed, just add Title, URL and Select fields. Other fields will be added by the application as new episodes are downloaded. The first time a feed is being processed, the application downloads any episodes that were released within the last one week from the current time.
