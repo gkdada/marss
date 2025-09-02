@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include <config.h>
 #include <curl/curl.h>
 #include <memory.h>
 #include <unistd.h>
 #include <sys/stat.h>
 
-#include <FeedsFile.h>
-#include <XmlParser.h>
+#include "FeedsFile.h"
+#include "XmlParser.h"
+
+#define PACKAGE_VERSION "1.0"
 
 #define BUILD_YEAR_CH0 (__DATE__[ 7])
 #define BUILD_YEAR_CH1 (__DATE__[ 8])
